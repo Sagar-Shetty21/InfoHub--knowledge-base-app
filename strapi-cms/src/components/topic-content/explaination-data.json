@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_topic_explaination_data",
+  "info": {
+    "displayName": "Explaination Data",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "textData": {
+      "type": "blocks",
+      "required": true
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
