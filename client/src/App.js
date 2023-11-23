@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import TopBar from "./components/TopBar";
 import TopicCard from "./components/TopicCard";
@@ -14,7 +15,14 @@ function App() {
         <TopicCard />
         <TopicCard />
         <TopicCard />
+        <TopicCard />
+        <TopicCard />
+        <TopicCard />
+        <TopicCard />
+        <TopicCard />
+        <TopicCard />
       </div>
+      <Footer />
     </div>
   );
 }
