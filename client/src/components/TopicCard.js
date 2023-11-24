@@ -19,7 +19,6 @@ const TopicCard = () => {
                 <div className="p-4 h-44 "><img className="h-full" src="/assets/icons/i-logo.png"/></div>
                 <div className="text-2xl font-semibold uppercase ">Heading</div>
                 <div className="text-gray-500">this is a short description</div>
-                {/* <div className=" bg-blue-600 rounded-xl text-xl w-full text-center py-2 text-white cursor-pointer">Read</div> */}
             </div>
         </div>
     )

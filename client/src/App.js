@@ -6,7 +6,7 @@ import TopicCard from "./components/TopicCard";
 function App() {
   return (
     <div>
-      <div className="curvy-slant-rectangle-bg -z-10" />
+      <div className="curvy-slant-rectangle-bg bg-cyan-950 -z-10 absolute" />
       <TopBar />
       <HeroSection />
       <div className="grid grid-cols-3 gap-8 px-40 mt-12">
