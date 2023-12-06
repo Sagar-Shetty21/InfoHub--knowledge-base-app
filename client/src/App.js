@@ -16,11 +16,11 @@ console.log(allTopics);
   }, []);
 
   return (
-    <div>
+    <div className="min-h-screen">
       <div className="curvy-slant-rectangle-bg bg-cyan-950 -z-10 absolute" />
       <TopBar />
       <HeroSection />
-      <div className="flex flex-wrap justify-between gap-8 px-40 mt-12">
+      <div className="flex flex-wrap justify-between gap-8 px-4 md:px-40 mt-12">
         {
           allTopics.map(topic => (
             <TopicCard key={topic.id} data={topic}/>

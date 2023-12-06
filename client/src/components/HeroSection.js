@@ -3,8 +3,8 @@ import React from 'react'
 const HeroSection = () => {
     return (
         <div className="flex flex-col items-center justify-center py-20 gap-6">
-            <div className="text-3xl text-white font-semibold">A Knowledge Sharing Platform</div>
-            <div className="text-white">Bringing together all the information about common concepts in the world of web technology.</div>
+            <div className="text-3xl text-white font-semibold text-center mt-10">A Knowledge Sharing Platform</div>
+            <div className="text-white text-center">Bringing together all the information about common concepts in the world of web technology.</div>
             <div className="inline-flex bg-white rounded-md h-10 overflow-hidden items-center ">
                 <input className="p-2 outline-none w-64 hover:w-96 border-none transition-all ease-in focus:w-96 text-lg " type="text" />
                 <div className="bg-purple-500 h-full p-2 px-3 hover:bg-purple-600 active:bg-purple-700 transition-all ease-in">
