@@ -8,9 +8,9 @@ import axios from "axios";
 function App() {
 
   const [allTopics, setAllTopics] = useState([])
-console.log(allTopics);
+  console.log(process.env.REACT_APP_STRAPI_ENDPOINT)
   useEffect(() => {
-    axios.get("http://localhost:1337/api/topics?populate=*")
+    axios.get(`${process.env.REACT_APP_STRAPI_ENDPOINT}/api/topics?populate=*`)
         .then(({ data }) => setAllTopics(data.data))
         .catch((error) => console.log(error));
   }, []);

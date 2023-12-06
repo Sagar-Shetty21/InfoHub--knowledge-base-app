@@ -20,11 +20,11 @@ const CreateTopic = () => {
         console.log(selectedFile)
         // const upload_res = await axios({
         //     method: "POST",
-        //     url: "http://localhost:1337/api/upload/",
+        //     url: "${process.env.REACT_APP_STRAPI_ENDPOINT}/api/upload/",
         //     data: file
         // })
 
-        await axios.post("http://localhost:1337/api/upload/",file)
+        await axios.post(`${process.env.REACT_APP_STRAPI_ENDPOINT}/api/upload/`,file)
             .then((response) => {
                 setUploadedFileId(response.data[0].id)
                 alert("Image uploaded successfully!")
@@ -38,7 +38,7 @@ const CreateTopic = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
 
-        await axios.post("http://localhost:1337/api/topics",{
+        await axios.post(`${process.env.REACT_APP_STRAPI_ENDPOINT}/api/topics`,{
             data: {
                 title,
                 description,

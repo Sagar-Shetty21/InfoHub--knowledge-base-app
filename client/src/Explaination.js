@@ -7,7 +7,7 @@ const Explaination = () => {
     const [explaination, setExplaination] = useState({});
 
     useEffect(() => {
-        axios.get(`http://localhost:1337/api/topics/${id}?populate=*`)
+        axios.get(`${process.env.REACT_APP_STRAPI_ENDPOINT}/api/topics/${id}?populate=*`)
             .then(({ data }) => setExplaination(data.data))
             .catch((error) => console.log(error));
     }, []);
@@ -25,7 +25,7 @@ const Explaination = () => {
                 className="bg-cover h-64 text-center overflow-hidden"
                 style={{
                     height: '450px',
-                    backgroundImage: `url(http://localhost:1337${explaination?.attributes?.image?.data?.attributes?.url})`
+                    backgroundImage: `url(${process.env.REACT_APP_STRAPI_ENDPOINT}${explaination?.attributes?.image?.data?.attributes?.url})`
                 }}
                 title="Woman holding a mug"
             />
