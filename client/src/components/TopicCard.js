@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 
-const TopicCard = () => {
+const TopicCard = ({data}) => {
 
     const [randomColor, setRandomColor] = useState('');
 
@@ -12,15 +13,18 @@ const TopicCard = () => {
         };
         getRandomColor();
     },[])
-
+    
     return (
-        <div className="flex justify-center items-center">
-            <div className={`py-6 px-16 bg-white rounded-md flex flex-col justify-center items-center shadow-2xl border-b-4 cursor-pointer ${randomColor}`}>
-                <div className="p-4 h-44 "><img className="h-full" src="/assets/icons/i-logo.png"/></div>
-                <div className="text-2xl font-semibold uppercase ">Heading</div>
-                <div className="text-gray-500">this is a short description</div>
+        <Link to={`/explanation/${data.id}`}>
+            <div className="flex justify-center items-center w-40">
+                <div className={`w-full py-6 px-16 bg-white rounded-md flex flex-col justify-center items-center shadow-2xl border-b-4 cursor-pointer ${randomColor}`}>
+                    <div className="p-4 h-44 w-44"><img className="w-full h-full" src={`http://localhost:1337${data.attributes.image.data.attributes.url}`}/></div>
+                    <div className="text-2xl font-semibold uppercase text-center">{data?.attributes?.title}</div>
+                    <div className="text-gray-500">{data?.attributes?.description}</div>
+                </div>
             </div>
-        </div>
+        </Link>
+
     )
 }
 
