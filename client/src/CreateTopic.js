@@ -58,7 +58,7 @@ const CreateTopic = () => {
     }
 
     return (
-        <div className="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2 ">
+        <div className="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2 mt-4">
             <div className="text-center text-2xl font-semibold mb-6">Create a Topic</div>
             <form onSubmit={handleSubmit}>
                 <div className="mb-5">
