@@ -25,15 +25,15 @@ const Explaination = () => {
                 className="bg-cover h-64 text-center overflow-hidden"
                 style={{
                     height: '450px',
-                    backgroundImage: `url(${process.env.REACT_APP_STRAPI_ENDPOINT}${explaination?.attributes?.image?.data?.attributes?.url})`
+                    backgroundImage: `url(${explaination?.attributes?.image?.data?.attributes?.url})`
                 }}
-                title="Woman holding a mug"
+                title="Illustration Image"
             />
 
             <div class="max-w-2xl mx-auto">
                 <div class="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
                     <div class="">
-                        <p class="text-base leading-8 my-5">{explaination?.attributes?.explaination}</p>
+                        <div dangerouslySetInnerHTML={{ __html: explaination?.attributes?.explaination }} />
                     </div>
                 </div>
             </div>

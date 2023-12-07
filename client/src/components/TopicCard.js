@@ -13,14 +13,15 @@ const TopicCard = ({data}) => {
         };
         getRandomColor();
     },[])
+
     
     return (
         <Link to={`/explaination/${data?.id}`}>
             <div className="flex justify-center items-center w-40 md:w-60 overflow-hidden">
-                <div className={`w-full py-6 px-16 bg-white rounded-md flex flex-col justify-center items-center shadow-2xl border-b-4 cursor-pointer ${randomColor}`}>
-                    <div className="p-4 h-44 w-44"><img className="w-full h-full" src={`${process.env.REACT_APP_STRAPI_ENDPOINT}${data?.attributes?.image?.data?.attributes?.url}`}/></div>
+                <div className={`w-full p-6 bg-white rounded-md flex flex-col justify-center items-center shadow-2xl border-b-4 cursor-pointer ${randomColor}`}>
+                    <div className="p-4 h-44 w-44"><img className="w-full h-full" src={data?.attributes?.image?.data?.attributes?.url}/></div>
                     <div className="text-lg md:text-2xl font-semibold uppercase text-center">{data?.attributes?.title}</div>
-                    <div className="text-gray-500 hidden md:block">{data?.attributes?.description}</div>
+                    <div className="text-gray-500 hidden md:line-clamp-2">{data?.attributes?.description}</div>
                 </div>
             </div>
         </Link>
