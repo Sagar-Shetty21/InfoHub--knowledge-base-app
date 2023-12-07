@@ -32,7 +32,7 @@ const Explaination = () => {
 
             <div class="max-w-2xl mx-auto">
                 <div class="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
-                    <div class="">
+                    <div class="mt-8">
                         <div dangerouslySetInnerHTML={{ __html: explaination?.attributes?.explaination }} />
                     </div>
                 </div>
