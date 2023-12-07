@@ -13,17 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "subTitle": {
-      "type": "text",
-      "required": true
+    "description": {
+      "type": "text"
     },
-    "thumbnail": {
+    "image": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
@@ -32,10 +30,7 @@
       ]
     },
     "explaination": {
-      "type": "component",
-      "repeatable": true,
-      "component": "topic-content.explaination-data",
-      "required": true
+      "type": "text"
     }
   }
 }
