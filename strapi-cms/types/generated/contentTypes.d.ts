@@ -374,10 +374,10 @@ export interface ApiTopicTopic extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
     image: Attribute.Media;
-    explaination: Attribute.Text;
+    explaination: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
